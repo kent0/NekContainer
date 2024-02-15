@@ -8,7 +8,7 @@ Docker
 
 ## Bootstrap
 
-`source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/kent0/NekContainer/HEAD/bootstrap.sh)`
+`source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/kent0/NekContainer/HEAD/bootstrap.sh)"`
 
 ## Usage
 
