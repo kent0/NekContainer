@@ -6,6 +6,10 @@ NekContainer allows easy setup for [Nek5000](https://nek5000.mcs.anl.gov) when c
 
 Docker
 
+## Bootstrap
+
+`source /dev/stdin <<< "$(curl -fsSL https://raw.githubusercontent.com/kent0/NekContainer/HEAD/bootstrap.sh)`
+
 ## Usage
 
 After [installing Docker](https://docs.docker.com/engine/install/), simply run the command in `./build` or simply run it if you are in a UNIX environment. This builds the Nek5000 Docker container specified in the `./Dockerfile`. Then `source setup.sh` to load in the containerized commands familiar to Nek5000 users with a c-prefix:
