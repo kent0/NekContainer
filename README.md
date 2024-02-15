@@ -1,6 +1,6 @@
 # NekContainer: A Docker Solution for Nek5000 Portability
 
-NekContainer allows easy setup for Nek5000 when compiler compatability issues arise.
+NekContainer allows easy setup for [Nek5000](https://nek5000.mcs.anl.gov) when compiler compatability issues arise.
 
 ## Dependencies
 
