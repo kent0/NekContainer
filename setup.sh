@@ -14,16 +14,19 @@ alias cnekruni='docker run -it -v "$(pwd)":/root/udir nek:latest bash'
 
 # convenience wrappers for nek commands
 
-alias cn2to3='cnekruni -c "~/Nek5000/bin/n2to3"'
-alias cgenmap='cnekruni -c "~/Nek5000/bin/genmap"'
-alias cgenbox='cnekruni -c "~/Nek5000/bin/genbox"'
+NEKR_BIN=/root/Developer/NekROM/bin
+NEK_BIN=/root/Developer/Nek5000/bin
 
-cmakenek() { cnekruni -c "~/Nek5000/bin/makenek $1"; }
-cmakerom() { cnekruni -c "source ~/.bashrc && ~/NekROM/bin/makerom $1"; }
+alias cn2to3='cnekruni -c "$NEK_BIN/n2to3"'
+alias cgenmap='cnekruni -c "$NEK_BIN/genmap"'
+alias cgenbox='cnekruni -c "$NEK_BIN/genbox"'
 
-cnekmpi()  {  cnekruni -c "~/Nek5000/bin/nekmpi  $1 $2";  }
-cneklmpi() {  cnekruni -c "~/Nek5000/bin/neklmpi $1 $2";  }
-cnekbmpi() { (cnekrun  -c "~/Nek5000/bin/neklmpi $1 $2"&) }
+cmakenek() { cnekruni -c "$NEK_BIN/makenek $1"; }
+cmakerom() { cnekruni -c "source ~/.bashrc && $NEKR_BIN/makerom $1"; }
+
+cnekmpi()  {  cnekruni -c "$NEK_BIN/nekmpi  $1 $2";  }
+cneklmpi() {  cnekruni -c "$NEK_BIN/neklmpi $1 $2";  }
+cnekbmpi() { (cnekrun  -c "$NEK_BIN/neklmpi $1 $2"&) }
 
 
 # convenience functions
