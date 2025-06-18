@@ -12,7 +12,7 @@ Docker
 
 ## Usage
 
-After [installing Docker](https://docs.docker.com/engine/install/), simply run the command in `./build` or simply run it if you are in a UNIX environment. This builds the Nek5000 Docker container specified in the `./Dockerfile`. Then `source setup.sh` to load in the containerized commands familiar to Nek5000 users with a c-prefix:
+After [installing Docker](https://docs.docker.com/engine/install/), simply run the command (in) `./build`. This builds the Nek5000 Docker container specified in the `./Dockerfile`. Then `source setup.sh` to load in the containerized commands familiar to Nek5000 users with a c-prefix:
 
 ```bash
 cn2to3
