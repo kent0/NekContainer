@@ -13,6 +13,7 @@
    RUN (cd $NEK_SOURCE_ROOT && git checkout prod && git remote add upstream https://github.com/Nek5000/Nek5000)
 
    RUN (cd $NEK_SOURCE_ROOT/tools && ./maketools genmap n2to3 reatore2 genbox)
+   COPY makenekc $NEK_BIN/makenek
    RUN (cd $NEK_SOURCE_ROOT/short_tests/eddy && cp SIZE.legacy SIZE && $NEK_BIN/makenek)
 
    RUN git clone https://github.com/kent0/NekROM -b setusr-fix $DEV/NekROM
@@ -41,6 +42,7 @@
 
    ENV MOR_DIR=$DEV/NekROM
    ENV PATH=$PATH:$NEK_BIN:$MOR_DIR/bin
+
 
 #  COPY genboxs $NEK_BIN/
 #  COPY genmaps $NEK_BIN/
